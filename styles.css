@@ -129,7 +129,7 @@ img {
 .overlay {
   background-color: #2f303a;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../img/фон-героя.jpg);
+    url(../goit-markup-hw-04/img/фон-героя.jpg);
   background-repeat: no-repeat;
   background-position: center;
   min-width: 1600px;
