@@ -123,9 +123,17 @@ img {
 
 /* ---------------------hero----------------- */
 .hero {
-  background: #2f303a;
   padding: 200px 0;
   text-align: center;
+}
+.overlay {
+  background-color: #2f303a;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../img/фон-героя.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 1600px;
+  height: 600px;
 }
 .main-title {
   margin: 0 auto;
@@ -190,6 +198,16 @@ img {
 }
 .item {
   width: 270px;
+}
+.item::before {
+  display: block;
+  content: '  ';
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.item :nth-child(1)::before {
 }
 .advantage-title {
   margin-top: 0;
