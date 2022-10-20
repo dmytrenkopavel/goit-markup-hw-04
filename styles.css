@@ -67,13 +67,13 @@ img {
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  fill: #757575;
+  fill: currentColor;
 }
 .svg-phone {
   width: 10px;
   height: 16px;
   margin-right: 10px;
-  fill: #757575;
+  fill: currentColor;
 }
 
 .header-connect {
@@ -132,6 +132,8 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  display: flex;
+  align-items: center;
 }
 .adress {
   font-weight: 400;
@@ -148,10 +150,12 @@ img {
 .overlay {
   background-color: #2f303a;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../goit-markup-hw-04/img/фон-героя.jpg);
+    url(../goit-markup-hw-04/img/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  min-width: 1600px;
+  background-size: cover;
+  margin: 0 auto;
+  max-width: 1600px;
   height: 600px;
 }
 
@@ -301,7 +305,7 @@ img {
   color: var(--title-color);
   margin-bottom: 50px;
 }
-.portpholio {
+.portpholio-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
@@ -315,13 +319,17 @@ img {
   color: var(--title-color);
   margin-bottom: 4px;
 }
-.link-border {
+.portpholio-item {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
 }
 
-.portpholio li:hover {
+.portpholio-link {
+  display: block;
+}
+.portpholio-link:hover,
+.portpholio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -344,8 +352,9 @@ img {
 
 .social-network-list {
   display: flex;
-  margin: 16px 32px 30px 32px;
-  justify-content: space-between;
+  margin-top: 16px;
+  gap: 10px;
+  justify-content: center;
 }
 
 .social-network-link {
@@ -355,19 +364,22 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #afb1b8;
 }
-.social-network-link:hover .social-network-svg {
-  fill: #ffffff;
-}
+
 .social-network-link:focus,
 .social-network-link:hover {
   background-color: #2196f3;
-  cursor: pointer;
+  color: var(--main-bcg-color);
+}
+.logo-company {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .social-network-svg {
   width: 20px;
   height: 20px;
-  fill: #afb1b8;
+  fill: currentColor;
 }
 
 .logo-company-title {
@@ -375,31 +387,32 @@ img {
 }
 .logo-company-list {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 .logo-company-box {
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 .logo-company-svg {
   width: 106px;
   height: 60px;
-  margin-top: 16px;
-  margin-left: 32px;
-  fill: #afb1b8;
+  display: flex;
+
+  fill: currentColor;
 }
 
 .logo-company-link {
   display: flex;
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
+  border: 1px solid currentColor;
   border-radius: 4px;
+  color: #afb1b8;
+  justify-content: center;
+  align-items: center;
 }
 .logo-company-link:hover,
 .logo-company-link:focus {
-  border: 1px solid var(--blue-color);
   cursor: pointer;
+  color: var(--blue-color);
 }
 .logo-company-link:hover .logo-company-svg,
 .logo-company-link:focus .logo-company-svg {
@@ -432,7 +445,8 @@ img {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.social-foot-list .social-network-link:hover {
+.social-foot-list .social-network-link:hover,
+.social-foot-list .social-network-link:focus {
   background-color: #2196f3;
 }
 .social-network-box .social-network-svg > use {
@@ -453,17 +467,13 @@ img {
 }
 
 .social-network-box {
-  display: flex;
-  flex-wrap: wrap;
   margin-left: 70px;
-  height: 80px;
-  width: 206px;
 }
 
 .last-title {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
